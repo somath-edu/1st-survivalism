@@ -1,3 +1,85 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* --- 잡지형 목차 스타일 시작 --- */
+.magazine-index {
+  /* 전체 컨테이너를 중앙으로 모아 시선의 분산을 막습니다 */
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+
+  /* 메인 타이틀 */
+  h1 {
+    font-family: 'Lora', 'Georgia', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  /* 부제목 (따옴표 안의 문장) */
+  p:first-of-type {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 4rem;
+  }
+
+  /* PART I, PART II (붉은 톤의 작은 글씨와 밑줄) */
+  h2 {
+    font-family: 'Lora', 'Georgia', serif;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    letter-spacing: 0.2em;
+    border-bottom: 1px solid var(--lightgray);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 진단, 처방 등 소제목 */
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--darkgray);
+    margin-bottom: 2rem;
+  }
+
+  /* 리스트 정돈: 기본 번호를 숨기고 커스텀 디자인 적용 */
+  ol {
+    list-style: none; /* 무작위로 생성되는 기본 숫자 제거 */
+    padding: 0;
+    margin-bottom: 4rem;
+
+    li {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      /* 각 항목 앞의 숫자 디자인 (01, 02...) */
+      &::before {
+        content: counter(list-item, decimal-leading-zero);
+        font-family: 'Lora', 'Georgia', serif;
+        font-style: italic;
+        color: var(--gray);
+        font-size: 1.2rem;
+      }
+      
+      /* 링크 텍스트가 자연스럽게 보이도록 정돈 */
+      a {
+        color: var(--darkgray);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+}
+/* --- 잡지형 목차 스타일 끝 --- */
