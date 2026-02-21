@@ -1,4 +1,4 @@
-baseURL = 'https://somath-edu.github.io/저장소이름/'
+baseURL = 'https://somath-edu.github.io/1st-survivalism/'
 languageCode = 'ko-kr'
 title = '생동주의'
 theme = ['github.com/adityatelange/hugo-PaperMod']
