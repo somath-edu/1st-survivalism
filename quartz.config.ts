@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "생동주의",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
