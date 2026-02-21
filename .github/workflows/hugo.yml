@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.121.2
+      HUGO_VERSION: 0.146.0 # 테마 요구 사항에 맞춰 버전을 높였습니다.
     steps:
       - name: Install Hugo CLI
         run: |
@@ -25,6 +25,8 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
