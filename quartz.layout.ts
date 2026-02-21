@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      // 필요하다면 이곳을 준익몽님의 링크로 바꿀 수 있습니다.
+      // GitHub: "https://github.com/somath-edu",
     },
   }),
 }
@@ -38,12 +38,12 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    // Component.Explorer(), // 화면을 꽉 채우던 파일 트리를 덜어내어 여백 확보
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    // Component.Graph(), // 복잡하게 얽힌 노드 선들을 치움
+    Component.DesktopOnly(Component.TableOfContents()), // 목차만 남겨둠
+    // Component.Backlinks(), // 시선을 분산시키는 백링크 제거
   ],
 }
 
@@ -62,7 +62,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    // Component.Explorer(), // 리스트 페이지에서도 파일 트리 제거
   ],
   right: [],
 }
