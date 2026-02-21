@@ -1,0 +1,10 @@
+baseURL = 'https://somath-edu.github.io/저장소이름/'
+languageCode = 'ko-kr'
+title = '생동주의'
+theme = ['github.com/adityatelange/hugo-PaperMod']
+
+[params]
+  defaultTheme = "light"      # 다크모드 변수 차단, 종이책 느낌의 라이트모드 고정
+  disableThemeToggle = true   # 불필요한 테마 전환 버튼 제거
+  ShowToc = true              # 목차 자동 생성 기능 켜기
+  TocOpen = true              # 목차를 항상 열어두어 정보의 이정표 역할
